@@ -29,7 +29,7 @@ With coin = X every step, the coin state toggles deterministically, so motion is
   - t=3: 101:256, 001:246, 011:268, 111:1230, with interference-enhanced extremes
 - RMS comparison vs classical:
   - Quantum RMS at t=1,2,3: 1.0000, 1.4457, 1.7595
-  - Classical √t: 1.0000, 1.4142, 1.7321
+  - Classical √t: 1.0000, 1.8057, 3.4415
   - Quantum spread is slightly larger and trends toward ballistic scaling at larger t.
 
 The Hadamard coin creates coherent superpositions that interfere constructively near the ballistic fronts and destructively near the center, producing the characteristic double-lobed profile and faster-than-diffusive spread.
@@ -39,7 +39,10 @@ The Hadamard coin creates coherent superpositions that interfere constructively 
 ## Problem 3: DTQW on Graphs (Grover Coin)
 
 - Method: Use Grover coin on each vertex and a flip-flop shift on directed edges; initialize an equal superposition over the outgoing arcs of a chosen start vertex; embed in nearest power-of-2 register as needed.
-- Example graph: 8-vertex degree-3 structure. At T=6 steps, vertex marginals concentrate on a subset: vertex 0 ≈ 0.355, 3 ≈ 0.216, 5 ≈ 0.211, 6 ≈ 0.219.
+- Example graphs:
+- 1.8-vertex degree-3 structure. At T=6 steps, vertex marginals concentrate on a subset: vertex 0 ≈ 0.355, 3 ≈ 0.216, 5 ≈ 0.211, 6 ≈ 0.219.
+- 2.8-vertex cycle. At T=6 steps, vertex marginals concentrate on a subset: vertex 2=0.499, 6=0.501.
+- 8-vertex hypercube. At T=6 steps,vertex marginals concentrate on a subset: vertex 0=0.345,3=0.215,5=0.223,6=0.207.
 
 The Grover coin amplifies certain directions via interference, deviating from classical mixing at the same time horizon. The nonuniform vertex marginals are a hallmark of coherent transport on graphs.
 
@@ -59,9 +62,12 @@ The walk on a ladder with reflections plus coin interference creates asymmetric 
 
 ---
 ## Problem 5 : Statevector Estimation
--How to run
-res = run_file("/kaggle/input/statevector-test/state_test_200.txt", shots=500)
+
+
+- How to run :
+- res = run_file("example.txt", shots=500)
 summarize(res)
+
 ---
 ## Problem 6: Adiabatic Evolution (2-qubit demo and MaxCut surrogate)
 
