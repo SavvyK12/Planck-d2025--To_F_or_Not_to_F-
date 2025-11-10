@@ -58,7 +58,11 @@ The Grover coin amplifies certain directions via interference, deviating from cl
 The walk on a ladder with reflections plus coin interference creates asymmetric probability flows. Adding site-dependent phases mimics a potential, reshaping interference fringes and RMS growth. Finite N induces recurrences and localization bands.
 
 ---
-
+## Problem 5 : Statevector Estimation
+-How to run
+res = run_file("/kaggle/input/statevector-test/state_test_200.txt", shots=500)
+summarize(res)
+---
 ## Problem 6: Adiabatic Evolution (2-qubit demo and MaxCut surrogate)
 
 - Setup: A simple 2-qubit illustrative instance and a MaxCut surrogate; interpolate H(s)=(1-s)H₀+sH_P with linear schedule; estimate gaps and simulate dynamics via first-order Trotterization.
